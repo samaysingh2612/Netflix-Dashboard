@@ -52,7 +52,7 @@ df = load_data()
 
 # ---------------- SIDEBAR ---------------- #
 
-st.sidebar.title("📌 Dashboard Menu")
+st.sidebar.title("Dashboard Menu")
 
 option = st.sidebar.radio(
     "Select Section",
@@ -96,7 +96,7 @@ if option == "Home":
 
 elif option == "Dataset Overview":
 
-    st.header("📂 Dataset Information")
+    st.header("Dataset Information")
 
     st.subheader("Shape of Dataset")
     st.write(df.shape)
@@ -114,7 +114,7 @@ elif option == "Dataset Overview":
 
 elif option == "Missing Values":
 
-    st.header("❌ Missing Values")
+    st.header(" Missing Values")
 
     missing = df.isnull().sum()
 
@@ -130,7 +130,7 @@ elif option == "Missing Values":
 
 elif option == "Duplicate Records":
 
-    st.header("📋 Duplicate Records")
+    st.header(" Duplicate Records")
 
     duplicate = df[df.duplicated()]
 
@@ -159,7 +159,7 @@ elif option == "Movie Search":
 
 elif option == "Director Analysis":
 
-    st.header("🎥 Top Directors")
+    st.header(" Top Directors")
 
     if 'Director' in df.columns:
 
@@ -235,7 +235,7 @@ elif option == "Content Analysis":
 
 elif option == "Heatmap":
 
-    st.header("🔥 Correlation Heatmap")
+    st.header(" Correlation Heatmap")
 
     numeric_df = df.isnull()
 
@@ -341,15 +341,14 @@ elif option == "About":
     st.write("""
     This project demonstrates:
 
-    ✅ NumPy Operations  
-    ✅ Pandas Data Analysis  
-    ✅ Data Cleaning  
-    ✅ Missing Value Handling  
-    ✅ Duplicate Handling  
-    ✅ Matplotlib Visualizations  
-    ✅ Seaborn Charts  
-    ✅ Interactive Dashboard using Streamlit  
+    1. NumPy Operations  
+    2. Pandas Data Analysis  
+    3. Data Cleaning  
+    4. Missing Value Handling  
+    5. Duplicate Handling  
+    6. Matplotlib Visualizations  
+    7. Seaborn Charts  
+    8. Interactive Dashboard using Streamlit  
 
     """)
 
-    st.success("Portfolio Project Ready 🚀")
